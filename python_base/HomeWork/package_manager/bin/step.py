@@ -12,9 +12,10 @@ sys.path.append(project_base_dir)
 
 '''1'''
 '''导入main 包, bao》模块》函数（要在__init__中导入相应模块）'''
-from core import main
-if __name__ == '__main__':
-    main.main.main()
+# from core import main
+# if __name__ == '__main__':
+#     main.main.main()
+
 
 '''2 导入模块 模块》函数'''
 # from core.main import main
@@ -25,3 +26,18 @@ if __name__ == '__main__':
 # from HomeWork.package_manager.core.main import main
 # if __name__ == '__main__':
 #     main.main()
+
+'''4 动态import模块（不推荐）
+    这里module是到package'''
+# module = __import__('core.main')
+# if __name__ == '__main__':
+#     module.main.main.main()
+
+'''5 动态import模块 (推荐)
+    这里main直接到相应模块了
+    '''
+import importlib
+main = importlib.import_module('core.main')
+if __name__ == '__main__':
+    main.main.main()
+

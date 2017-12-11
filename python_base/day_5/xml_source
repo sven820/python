@@ -1,0 +1,22 @@
+<data>
+    <country name="Liechtenstein">
+        <rank updated="yes">2</rank>
+        <YEAR atr2="hehe" attri="content">2038</YEAR>
+        <gdppc>141100</gdppc>
+        <neighbor direction="E" name="Austria" />
+        <neighbor direction="W" name="Switzerland" />
+        </country>
+    <country name="Singapore">
+        <rank updated="yes">5</rank>
+        <YEAR atr2="hehe" attri="content">2041</YEAR>
+        <gdppc>59900</gdppc>
+        <neighbor direction="N" name="Malaysia" />
+        </country>
+    <country name="Panamasss">
+        <rank updated="yes">69</rank>
+        <YEAR atr2="hehe" attri="content">2041</YEAR>
+        <gdppc>13600</gdppc>
+        <neighbor direction="W" name="Costa Rica" />
+        <neighbor direction="E" name="Colombia" />
+        </country>
+</data>

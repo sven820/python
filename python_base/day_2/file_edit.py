@@ -1,7 +1,18 @@
 __author__ = "JJ.sven"
 
-file = open('doc', 'r', encoding='utf-8')
-file_bak = open('doc.bak', 'w', encoding='utf-8')
+import os
+
+dir_name = os.path.dirname(__file__)
+
+ori_file = 'doc'
+ori_file_p = os.path.join(dir_name, ori_file)
+
+cache_file = '.doc.bak' #linux 名称以.开头就是隐藏文件
+cache_file_p = os.path.join(dir_name, cache_file)
+
+
+file = open(ori_file, 'r', encoding='utf-8')
+file_bak = open(cache_file, 'w', encoding='utf-8')
 for line in file:
     if 'guangzhou' in line:
         line = line.replace('guangzhou', 'jinxiaofei')
@@ -10,10 +21,17 @@ for line in file:
 file_bak.close()
 file.close()
 
+os.remove(ori_file_p)
+os.rename(cache_file_p, ori_file_p)
+
+print(os.stat(ori_file_p))
+
+
 # 再删除原来的，将bak文件重命名之前的就可以了
 
-with open('doc', 'r', encoding='utf-8') as f, \
-     open('doc.bak', 'r', encoding='utf-8') as f_bak:
 
-    print(f.read())
-    print(f_bak.read())
+# with open(ori_file, 'r', encoding='utf-8') as f, \
+#      open(cache_file, 'r', encoding='utf-8') as f_bak:
+#
+#     print(f.read())
+#     print(f_bak.read())
