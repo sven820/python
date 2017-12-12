@@ -15,6 +15,8 @@ class MyException(Exception):
     pass
 
 def tfunc():
+    t = 'jj'
+    # assert type(t) is str
     raise MyException('my exception')
 
 # tfunc()
