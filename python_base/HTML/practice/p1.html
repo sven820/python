@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <span id="view1" style="background: lightcyan">欢迎领导莅临交通大学指导查看&nbsp;&nbsp;&nbsp;</span>
+
+    <script type="text/javascript">
+        function scroll(arg) {
+            var view = document.getElementById('view1');
+            var content = view.innerText;
+            var first = content.charAt(0)
+            var left_content = content.substring(1, content.length);
+            var new_content = left_content + first;
+            view.innerText = new_content;
+//            console.log(arg)
+        }
+
+        setInterval(scroll, 500, 'test arg')
+    </script>
+</body>
+</html>

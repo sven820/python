@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .menu {
+            width: 400px;
+            background: lightblue;
+        }
+        .hide {
+            display: none;
+        }
+        .menu_header {
+            background: cornflowerblue;
+            color: white;
+            line-height: 44px;
+        }
+        .menu_list div {
+            line-height: 39px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div id="menu_1">
+            <div class="menu_header" onclick="open_menu('menu_1')">menu 1</div>
+            <div class="menu_list">
+                <div>菜单1</div>
+                <div>菜单1</div>
+                <div>菜单1</div>
+            </div>
+        </div>
+        <div id="menu_2">
+            <div class="menu_header" onclick="open_menu('menu_2')">menu 2</div>
+            <div class="menu_list hide">
+                <div>菜单2</div>
+                <div>菜单2</div>
+                <div>菜单2</div>
+            </div>
+        </div>
+        <div id="menu_3">
+            <div class="menu_header" onclick="open_menu('menu_3')">menu 3</div>
+            <div class="menu_list hide">
+                <div>菜单3</div>
+                <div>菜单3</div>
+                <div>菜单3</div>
+            </div>
+        </div>
+        <div id="menu_4">
+            <div class="menu_header" onclick="open_menu('menu_4')">menu 4</div>
+            <div class="menu_list hide">
+                <div>菜单4</div>
+                <div>菜单4</div>
+                <div>菜单4</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function open_menu(eid) {
+            var menu_section = document.getElementById(eid);
+            menu_section.lastElementChild.classList.remove('hide');
+            var menu = menu_section.parentElement;
+            for (var i in menu.children){
+                var m = menu.children[i];
+                if (m.id != eid) {
+                    m.lastElementChild.classList.add('hide');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

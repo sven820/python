@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text", name="user">
+<br/>
+    <input type="password", name="pwd">
+<br/>
+    <input type="button" value="button">
+<br/>
+    <input type="submit" value="submit">
+<br/>
+    <form action="https://www.baidu.com/s", method="get">
+        <input type="search" name="wd">
+        <input type="submit" value="搜索">
+    </form>
+<br/>
+    <h2>选择框的使用</h2>
+    <div>
+        <!--radio 单选框， name相同则互斥-->
+
+        <p>请选择:</p>
+        男： <input type="radio", name="sex", value="1", checked="checked">
+        女： <input type="radio", name="sex", value="2">
+
+        <!--checkbox 多选框， name相同表示同一类-->
+
+        <p>爱好:</p>
+        篮球： <input type="checkbox", name="interest", value="1">
+        足球： <input type="checkbox", name="interest", value="2">
+        羽毛球： <input type="checkbox", name="interest", value="3">
+
+    </div>
+<br/>
+    <h2>上传文件</h2>
+    <!--file 依赖form表单设置 enctype="multipart/form-data"-->
+    <form enctype="multipart/form-data">
+        <input type="file" name="file_name">
+        <input type="submit", value="提交">
+    </form>
+
+<br/>
+    <h2>重置使用</h2>
+    <form>
+        <input type="text">
+        <input type="reset", value="重置">
+    </form>
+
+<br/>
+    <h2>多行输入textarea</h2>
+    <form>
+        <textarea name="text">我是默认值</textarea>
+        <input type="submit", value="提交">
+    </form>
+
+<br/>
+    <h2>下拉 select 单选</h2>
+    <form>
+        <select name="city">
+            <option value="1">北京</option>
+            <option value="2" selected="selected">上海</option>
+            <option value="3">合肥</option>
+        </select>
+        <input type="submit", value="提交">
+    </form>
+
+    <h2>下拉 select 多选</h2>
+    <form>
+        <!--multiple 表示多选-->
+        <select name="city", size="10", multiple="multiple">
+            <optgroup label="组1">
+                <option value="1">北京</option>
+                <option value="2" selected="selected">上海</option>
+                <option value="3">合肥</option>
+            </optgroup>
+            <optgroup label="组2">
+                <option value="4">广州</option>
+                <option value="5" selected="selected">杭州</option>
+                <option value="6">深圳</option>
+            </optgroup>
+
+        </select>
+        <input type="submit", value="提交">
+    </form>
+</body>
+</html>

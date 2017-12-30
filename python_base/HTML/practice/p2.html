@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hud_hide {
+            display: none;
+        }
+        .hudbg{
+            opacity: 0.4;
+            background: black;
+            position: fixed;
+            z-index:10;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        .hud_toast {
+            background: white;
+            position: fixed;
+            z-index: 11;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 200px;
+            margin-top: -100px;
+            margin-left: -200px;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="button" value="添加" onclick="show_hud()">
+    <input type="button" value="全选" onclick="checkall()">
+    <input type="button" value="取消" onclick="cancel_checkall()">
+    <input type="button" value="反选" onclick="reverse_checkall()">
+
+    <!--table-->
+    <table id="table">
+        <thead>
+            <tr>
+                <th>选择</th>
+                <th>主机</th>
+                <th>端口</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>1.1.1.1</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>1.1.1.2</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>1.1.1.3</td>
+                <td>300</td>
+            </tr>
+        </tbody>
+    </table>
+    <!--hud-->
+    <div class="hud hudbg hud_hide"></div>
+    <!--hud toast-->
+    <div class="hud hud_toast hud_hide">
+        <input type="text"><br/>
+        <input type="text"><br/>
+        <input type="button" value="确定" onclick="hide_hud()"><br/>
+        <input type="button" value="取消" onclick="hide_hud()"><br/>
+    </div>
+
+    <script type="text/javascript">
+        function show_hud() {
+            var huds = document.getElementsByClassName('hud')
+            for (var index in huds) {
+                var el = huds[index]
+                el.classList.remove('hud_hide')
+            }
+        }
+        function hide_hud() {
+            var huds = document.getElementsByClassName('hud')
+            for (var index in huds) {
+                var el = huds[index]
+                el.classList.add('hud_hide')
+            }
+        }
+        function checkall() {
+            var tbody = document.getElementById('table').lastElementChild;
+            for (var i in tbody.children) {
+                var tr = tbody.children[i];
+                var ck = tr.firstElementChild.firstElementChild;
+                ck.checked = true;
+            }
+        }
+        function cancel_checkall() {
+            var tbody = document.getElementById('table').lastElementChild;
+            for (var i in tbody.children) {
+                var tr = tbody.children[i];
+                var ck = tr.firstElementChild.firstElementChild;
+                ck.checked = false;
+            }
+        }
+        function reverse_checkall() {
+            var tbody = document.getElementById('table').lastElementChild;
+            for (var i in tbody.children) {
+                var tr = tbody.children[i];
+                var ck = tr.firstElementChild.firstElementChild;
+                ck.checked = !ck.checked;
+            }
+        }
+    </script>
+</body>
+</html>

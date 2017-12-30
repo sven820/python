@@ -4,6 +4,13 @@ name = 'jj'
 a = 2
 
 def test():
+    '''
+
+    :return:
+    '''
+
+    '''global 如果外部只是想访问全局变量，则可直接访问，
+       如果要修改，就需要使用global关键字申明'''
     global name
     name = 'xx'
 

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+        .index-body {
+            z-index:10;
+        }
+        .index-page-top {
+            z-index:20;
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+        .header {
+            background: lightskyblue;
+            height: 49px;
+            line-height: 49px;
+        }
+        .body .menu {
+            background: lightcyan;
+            position: absolute;
+            top: 49px;
+            left:0;
+            bottom: 0;
+            width: 200px;
+            overflow: auto;
+        }
+        .body .content {
+            background: lightcoral;
+            position: absolute;
+            top: 49px;
+            right:0;
+            bottom: 0;
+            left: 200px;
+            overflow: auto;
+            min-width: 980px;
+        }
+
+        .header .logo {
+            background: lightpink;
+            width: 200px;
+            text-align: center;
+            color: darkred;
+        }
+        .header .user {
+            background: lightpink;
+            width: 200px;
+            height: 49px;
+            position: relative;
+        }
+        .header .user:hover {
+            background: lightgreen;
+        }
+        .header .user:hover .tool {
+            display: block;
+        }
+        .header .user .head-icon img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-top: 4px;
+            margin-left: 4px;
+        }
+        .header .user .tool {
+            background: yellow;
+            position: absolute;
+            top: 49px;
+            left: 4px;
+            width: 100px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+
+    <div class="logo left">xxoo blog</div>
+    <div class="user right">
+        <a href="#" class="head-icon">
+            <img src="dog.png">
+        </a>
+        <div class="tool index-page-top">
+            <div>编辑</div>
+            <div>主页</div>
+            <div>退出</div>
+        </div>
+    </div>
+</div>
+<div class="body index-body">
+    <div class="menu">
+        <div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div>
+        <div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div>
+        <div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div>
+        <div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div>
+        <div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div><div>ffjsjfksfl</div>
+    </div>
+    <div class="content">
+        <div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div>
+        <div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div>
+        <div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div>
+        <div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div><div>fjsjfjof</div>
+    </div>
+</div>
+</body>
+</html>

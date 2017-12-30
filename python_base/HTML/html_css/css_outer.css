@@ -1,0 +1,12 @@
+.css_outer {
+    background: lightgray;
+    border: 1px solid red;
+    /*border-left: 1px blue;*/
+    height: 50px;
+    /*width: 1000px;*/
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+}

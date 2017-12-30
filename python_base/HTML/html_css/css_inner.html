@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /* style注释 */
+
+        /*ID 选择器*/
+        #id_select {
+            background: deepskyblue;
+        }
+
+        /*标签选择器*/
+        span {
+            background: brown;
+        }
+
+        /*类选择器*/
+        .class_select {
+            background: darkgreen;
+        }
+
+        /*层级选择器*/
+        .content p {
+            background: darkblue;
+        }
+
+        /*组合选择器*/
+        .combo1, #combo2 {
+            background: yellow;
+        }
+
+        /*属性选择器*/
+        span[shuxing='any'] {
+            background: darkorange;
+        }
+
+        /*伪类 hover*/
+        .hover {
+            background: blue;
+            color: white;
+        }
+        .hover:hover {
+            background: darkred;
+        }
+    </style>
+    <!--引入外部样式-->
+    <link rel="stylesheet" href="css_outer.css">
+
+</head>
+<body>
+
+<!--css 样式
+    标签内部 style
+    heade内部 style样式表
+    外部
+
+选择器
+
+    id选择器
+    标签选择器
+    类选择器
+    层级选择器 没，号
+    组合选择器，，号链接，表示且
+    属性选择器 【属性（可自定义）】
+
+选择器优先级：就近原则
+-->
+
+<h1>标签内部样式</h1>
+<p style="background: cadetblue">我是标签</p>
+
+<h1>head内部样式</h1>
+
+<h2>id 选择器</h2>
+<p id="id_select">id 选择器</p>
+
+<h2>标签选择器</h2>
+<div>
+    <p>jfjfjfjfj</p>
+    <span>放假放假就放假方法</span><br/>
+    <label>fjlslajsljflsjf</label>
+</div>
+
+<h2>类选择器</h2>
+<p class="class_select other_class">lslslslsllsl</p>
+
+<h2>层级选择器</h2>
+<div class="content">
+    <p>owowowoooow</p>
+</div>
+
+<h2>组合选择器</h2>
+<span class="combo1">lslslslslsls</span>
+<span id="combo2">x,xjdjjdjdj</span>
+
+<h2>属性选择器</h2>
+<span shuxing="any" s="xxx">qoqoqooqoo</span>
+<span shuxing="only">qoqoqooqoo</span>
+
+<h2>引入外部样式</h2>
+<div class="css_outer">outer....outer</div>
+
+<!--css 常见样式-->
+<!--float-->
+<div style="width: 20%;background: deepskyblue;float: left">float float</div>
+<div style="width: 60%;background: yellow;float: right">float float</div>
+<!--display
+内联标签无法设置size，margin padding
+设置display为inline-block的标签具有2者的属性设置
+-->
+<br/>
+<div style="background: green;display: inline">lfsljflsjfjsd</div>
+<span style="background: blue;display: block">llaldjdjdjdjk</span>
+<span style="background: darkblue;display: inline-block">inline-block</span>
+
+<!--none 隐藏-->
+<div style="display: none">jfjfjfjjf</div>
+<div>jfjfjfjjf</div>
+
+<!--内边距margin 外边距padding-->
+
+<!--position
+fixed => 固定在窗口某个位置
+relative + absolute  => 子控件实现与父控件相对布局
+-->
+<div onclick="action_go_top();"
+     style="position: fixed;
+     bottom: 20pt;
+     right: 20pt;">
+
+    <div
+            style="background: black;
+    width: 40px;height: 50px;
+    color: white;
+    position: relative"> 返回顶部
+        <!--relative + absolute相对布局-->
+        <div style="color: red; position: absolute;top: 0;right: 0;">X</div>
+    </div>
+</div>
+
+<div class="mengban"
+     style="position: fixed;
+     background: black;
+     opacity: 0.4;
+     display: none;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     /*z-index值越大越在上面*/
+     z-index: 10;
+">
+</div>
+<div class="toast"
+     style="background: white;
+     z-index: 20;
+     display: none;
+     width: 300pt;
+     height: 200pt;
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     margin-left: -150pt;
+     margin-top: -100pt;
+     ">
+
+</div>
+<script>
+    function action_go_top() {
+        document.body.scrollTop = 0;
+    }
+</script>
+
+<!--overflow
+hidden超过范围隐藏，（切掉）
+auto/scroll 显示滚动条
+-->
+<div style="width: 300px; height: 200px;overflow: auto">
+    <img src="html/image/7.png">
+</div>
+
+<!--伪类-->
+<a href="#" class="hover">点我</a>
+</body>
+</html>

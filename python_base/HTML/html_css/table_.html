@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--table标签
+    thead表头，tbody表体
+    tr 行， th,表头列(有格式）， td表体列
+-->
+<table border="1">
+    <!--row 行-->
+    <tr>
+        <!--列1-->
+        <td>第一列</td>
+        <td>第二列</td>
+        <td>第三列</td>
+    </tr>
+    <tr>
+        <!--列2-->
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+    </tr>
+</table>
+
+<!--完整写法-->
+<table border="1">
+    <thead>
+    <!--row 行-->
+    <tr>
+        <!--列1-->
+        <th>表头1</th>
+        <th>表头2</th>
+        <th>表头3</th>
+        <th>表头4</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <!--列2-->
+        <td>1</td>
+        <!--合并单元格，占2列-->
+        <td colspan="2">2</td>
+        <!--<td>3</td>-->
+        <td>4</td>
+    </tr>
+    <tr>
+        <!--列2-->
+        <td rowspan="2">1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <!--列2-->
+        <!--<td>1</td>-->
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
