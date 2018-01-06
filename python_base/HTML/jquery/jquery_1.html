@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="test" type="button" value="全选">
+    <input type="button" value="反选">
+    <input type="button" value="取消">
+
+    <table class="table" border="1px">
+        <thead>
+            <tr>
+                <th>选择</th>
+                <th>ip</th>
+                <th>port</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox"/>
+                </td>
+                <td>1.0.0.1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox"/>
+                </td>
+                <td>1.0.0.1</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox"/>
+                </td>
+                <td>1.0.0.1</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+
+<script src="jquery-3.2.1.js"></script>
+<script>
+    $(':button[value="全选"]').click(function () {
+        $('.table :checkbox').prop('checked', true);
+        console.log('check all');
+    })
+    $(':button[value="取消"]').click(function () {
+        $('.table :checkbox').prop('checked', false);
+    });
+    $(':button[value="反选"]').click(function () {
+        $('.table :checkbox').each(function (index) {
+            $(this).prop('checked', !$(this).prop('checked'));
+//            console.log(this);
+        })
+    });
+
+</script>
+</body>
+</html>
