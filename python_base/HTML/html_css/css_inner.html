@@ -45,6 +45,17 @@
         .hover:hover {
             background: darkred;
         }
+
+        .m3 {
+            background: lightgreen;
+        }
+
+        @media (min-width: 600px) {
+            .m1 {
+                /* important 设置优先级最高*/
+                background: lightcoral !important;
+            }
+        }
     </style>
     <!--引入外部样式-->
     <link rel="stylesheet" href="css_outer.css">
@@ -75,7 +86,7 @@
 <h1>head内部样式</h1>
 
 <h2>id 选择器</h2>
-<p id="id_select">id 选择器</p>
+<p id="id_select" class="m1 m3">id 选择器xxx</p>
 
 <h2>标签选择器</h2>
 <div>
