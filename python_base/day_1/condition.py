@@ -26,6 +26,9 @@ for i in range(0, 10, 2):
 else:
     print("for end ---------- \n")
 
+
+
+
 # 三元运算符
 b = 1 if a > 1 else 2
 print(b)
